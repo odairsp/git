@@ -10,8 +10,9 @@ ingredientes = ["queijo", "presunto", "tomate", "calabresa", "cebola", "ovo",
 qtdIngredientes = 1
 pizza = []
 escolha = ""
+
+print("Escolha até 5 ingredientes para sua pizza ou 0 para terminar: ")
 while qtdIngredientes <= 5:
-    print("Escolha até 5 ingredientes para sua pizza ou 0 para terminar: ")
     contador = 1
     for ingrediente in ingredientes:
         print(contador, "-", ingrediente)
@@ -20,7 +21,7 @@ while qtdIngredientes <= 5:
     escolha = input("Escolha o %d. ingrediente: " % qtdIngredientes)
 
     if escolha.isdigit():
-        qtdIngredientes += 11
+        qtdIngredientes += 1
         if int(escolha) > 0 and int(escolha) <= len(ingredientes):
             pizza.append(ingredientes[int(escolha)-1])
         elif int(escolha) == 0:
@@ -30,6 +31,5 @@ while qtdIngredientes <= 5:
             break
     else:
         print("Escolha inváliva")
-        break
 
 print("Sua pizza de", pizza, "está sendo preparada tenha um bom dia!")
