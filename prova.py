@@ -21,9 +21,13 @@ while qtdIngredientes <= 5:
     escolha = input("Escolha o %d. ingrediente: " % qtdIngredientes)
 
     if escolha.isdigit():
-        qtdIngredientes += 1
         if int(escolha) > 0 and int(escolha) <= len(ingredientes):
-            pizza.append(ingredientes[int(escolha)-1])
+            if ingredientes[int(escolha)-1] not in pizza:
+                qtdIngredientes += 1
+                pizza.append(ingredientes[int(escolha)-1])
+                print("Você escolheu", pizza, ".")
+            else:
+                print("Você já escolheu", pizza, ".")
         elif int(escolha) == 0:
             break
         else:
