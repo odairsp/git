@@ -48,9 +48,10 @@ print(valor)
 for nota in notas:
     notas[nota] = valor // nota
     valor -= notas[nota] * nota
-    print(valor)
+
     print("%i nota(s) de R$ %i,00" % (notas[nota], nota))
 for moeda in moedas:
     moedas[moeda] = valor // moeda
     valor -= moedas[moeda] * moeda
+    print(valor,moeda)
     
