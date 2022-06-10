@@ -48,10 +48,10 @@ print(valor)
 for nota in notas:
     notas[nota] = valor // nota
     valor -= notas[nota] * nota
+    print("%i nota(s) de R$ %i.00" % (notas[nota], nota))
 
-    print("%i nota(s) de R$ %i,00" % (notas[nota], nota))
 for moeda in moedas:
+    valor = round(valor, 2)
     moedas[moeda] = valor // moeda
     valor -= moedas[moeda] * moeda
-    print(valor,moeda)
-    
+    print("%i moeda(s) de R$ %.2f" % (moedas[moeda], moeda))
