@@ -21,6 +21,8 @@ X hora(s)
 Y minuto(s)
 Z segundo(s)
 
+datetime(1987, 12, 30, 17, 50, 14) #yr, mo, day, hr, min, sec
+
 Obs: Considere que o evento do caso de teste para o problema tem duração mínima de 1 minuto.
 
 Exemplo de Entrada	Exemplo de Saída
@@ -32,6 +34,8 @@ Dia 9
                     1 minuto(s)
                     0 segundo(s)
 '''
+from datetime import date, datetime
+
 
 diaI = input().split()
 diaI = int(diaI[1])
@@ -40,23 +44,19 @@ diaF = input().split()
 diaF = int(diaF[1])
 horaF, minF, segF = [int(x) for x in input().split(" : ")]
 
-if diaF == diaI:
-    dia = 0
-    hora = horaF - horaI
-    min = minF - minI
-    seg = segF - segI
-elif diaF > diaI:
-    dia = diaF - diaI - 1
-    hora = horaF - horaI
-    min = minF - minI
-    seg = segF - segI
-else:
-    dia = 30 - diaI + diaF
-    hora = 24 - horaI + horaF
-    min = 60 - minI + minF
-    seg = 60 - segI + segF
+inicial = datetime(2022, 1, diaI, horaI, minI, segI)
+final = datetime(2022, 1, diaF, horaF, minF, segF)
 
-print("%i dia(s)" % dia)
-print("%i hora(s)" % hora)
-print("%i minuto(s)" % min)
-print("%i segundo(s)" % seg)
+total = final - inicial
+segundos = total.seconds
+
+horas = segundos // 3600
+segundos -= horas * 3600
+minutos = segundos // 60
+segundos -= minutos * 60
+
+
+print("%i dia(s)" % total.days)
+print("%i hora(s)" % horas)
+print("%i minuto(s)" % minutos)
+print("%i segundo(s)" % segundos)
