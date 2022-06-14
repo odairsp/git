@@ -25,12 +25,9 @@ Exemplo de Entrada	Exemplo de Saída
 '''
 
 valor = int(input())
-x=0
+x = 0
 while x < 6:
     if valor % 2 != 0:
         print(valor)
         x += 1
     valor += 1
-
-
-
