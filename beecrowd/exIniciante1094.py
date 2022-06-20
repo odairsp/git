@@ -70,5 +70,7 @@ print("Total: %i cobaias" % soma)
 for animal, qtd in experimento.items():
     print("Total de %s: %i" % (animal, qtd))
 
+
 for animal, qtd in experimento.items():
-    print(f"Percental de {animal}: {round((qtd*100/soma)),2} %")
+    perc = round((qtd*100/soma),2)
+    print("Percentual de %s: %.2f %%" % (animal, perc))
