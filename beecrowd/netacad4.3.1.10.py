@@ -26,6 +26,7 @@ Aqui estão algumas informações para o ajudar:
 
 1 milha americana = 1609,344 metros;
 1 galão americano = 3,785411784 litros.
+
 Output esperado
 60.31143162393162
 31.36194444444444
@@ -35,12 +36,22 @@ Output esperado
 10.009131205673757
 
 '''
+
 def liters_100km_to_miles_gallon(liters):
-    pass
+    milha = 1609.344
+    galao = 3.785411784
+    galoes = liters/galao
+    milhas = 100000/milha
+    return milhas/galoes
 
 
 def miles_gallon_to_liters_100km(miles):
-    pass
+    milha = 1609.344
+    galao = 3.785411784
+
+    km = miles * milha / 1000
+    litroPorkm = galao/km*100
+    return litroPorkm
 
 
 print(liters_100km_to_miles_gallon(3.9))
