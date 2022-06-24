@@ -1,0 +1,8 @@
+1. frase: q
+3. frase: e
+5. frase: t
+7. frase: u
+9. frase: k
+11. frase: h
+13. frase: f
+15. frase: s

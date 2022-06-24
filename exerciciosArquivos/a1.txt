@@ -1,0 +1,7 @@
+2. frase: w
+4. frase: r
+6. frase: y
+8. frase: i
+10. frase: j
+12. frase: g
+14. frase: d
