@@ -1,10 +1,11 @@
-from funcoes import *
+import funcoes
+
 
 # xxxxxxxxxxxxxxxxxxxx   INICIO   xxxxxxxxxxxxxxxxxxxx
 while True:
-    existe_senhas()
+    funcoes.existe_senhas()
     senha = input("Digite sua senha: ")
-    senha = conferir_senha(senha)
+    senha = funcoes.conferir_senha(senha)
     while True:
         if senha[0]:
             print("\n", "-"*10, "Tarefas", "-"*10)
@@ -15,13 +16,13 @@ while True:
             print("0 - Sair")
             tarefa = input("Escolha uma tarefa: ")
             if tarefa == "1" and senha[1][0] == "1":
-               criar_arquivo(senha)
+                funcoes.criar_arquivo(senha)
             elif tarefa == "2" and senha[1][0] == "2":
-               ler_arquivo(senha)
+                funcoes.ler_arquivo(senha)
             elif tarefa == "3" and senha[1][0] == "3":
-               modificar_arquivo(senha)
+                funcoes.modificar_arquivo(senha)
             elif tarefa == "4" and senha[1][0] == "4":
-               deletar_arquivo(senha)
+                funcoes.deletar_arquivo(senha)
             elif tarefa == "0":
                 break
             else:

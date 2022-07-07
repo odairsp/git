@@ -1,5 +1,7 @@
+import os
 # abre em modo leitura
-file2 = open("a2.txt", "r")
+file2 = open(os.path.dirname(os.path.dirname(__file__)) +
+             "\\exerciciosArquivos\\"+"a2.txt", "r")
 
 # copias as linhas para uma lista
 filetemp = file2.readlines()
@@ -8,14 +10,16 @@ filetemp = file2.readlines()
 file2.close()
 
 # abre em modo de escrita
-file2 = open("a2.txt", "w")
+file2 = open(os.path.dirname(os.path.dirname(__file__)) +
+             "\\exerciciosArquivos\\"+"a2.txt", "w")
 
 # limpo o arquivo
 file2.write("")
 file2.close()
 
 # abre em modo de acressimo de conteudo
-file2 = open("a2.txt", "a")
+file2 = open(os.path.dirname(os.path.dirname(__file__)) +
+             "\\exerciciosArquivos\\"+"a2.txt", "a")
 
 # copia a lista filtrando, para o arquivo limpo
 for linha in filetemp:
@@ -25,8 +29,10 @@ for linha in filetemp:
 file2.close()
 
 # copia o conteudo dos arquivos para listas
-file1 = open("a1.txt", "r")
-file2 = open("a2.txt", "r")
+file1 = open(os.path.dirname(os.path.dirname(__file__)) +
+             "\\exerciciosArquivos\\"+"a1.txt", "r")
+file2 = open(os.path.dirname(os.path.dirname(__file__)) +
+             "\\exerciciosArquivos\\"+"a2.txt", "r")
 filetemp = file1.readlines()
 filetemp += file2.readlines()
 file1.close()

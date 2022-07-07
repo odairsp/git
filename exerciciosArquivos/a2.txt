@@ -1,0 +1,8 @@
+1. frase: a
+3. frase: c
+5. frase: e
+7. frase: g
+9. frase: i
+11. frase: k
+13. frase: m
+15. frase: p

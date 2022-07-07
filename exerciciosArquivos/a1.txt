@@ -1,0 +1,7 @@
+2. frase: b
+4. frase: d
+6. frase: f
+8. frase: h
+10. frase: j
+12. frase: l
+14. frase: o

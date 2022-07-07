@@ -8,7 +8,8 @@ def tem_permissao(senha):
 
 # confere se existe a senha
 def conferir_senha(senha):
-    senhas = open("senhas.txt", "r")
+    senhas = open(os.path.dirname(os.path.dirname(__file__)) +
+                  "\\exerciciosArquivos\\"+"senhas.txt", "r")
     lista_senhas = senhas.readlines()
     senhas.close()
 
@@ -22,7 +23,8 @@ def conferir_senha(senha):
 def criar_arquivo(senha):
     try:
         nome_arquivo = input("Digite o nome do arquivo .txt a ser criado: ")
-        arquivo = open(nome_arquivo + ".txt", "x")
+        arquivo = open(os.path.dirname(os.path.dirname(__file__)) +
+                       "\\exerciciosArquivos\\" + nome_arquivo + ".txt", "x")
         arquivo.close()
         print("Arquivo criado com sucesso!\n")
     except FileNotFoundError:
@@ -32,7 +34,8 @@ def criar_arquivo(senha):
 # ler arquivo
 def ler_arquivo(senha):
     try:
-        lista = os.listdir("c:/exerciciosArquivos")
+        lista = os.listdir(os.path.dirname(os.path.dirname(__file__)) +
+                           "\\exerciciosArquivos\\")
         for iten in lista:
             if iten.endswith(".txt"):
                 print(iten)
@@ -50,7 +53,7 @@ def ler_arquivo(senha):
 # modificar o conteudo
 def modificar_arquivo(senha):
     try:
-        lista = os.listdir("c:/exerciciosArquivos")
+        lista = os.listdir(os.path.dirname(os.path.dirname(__file__)) + "\\exerciciosArquivos\\")
         for iten in lista:
             if iten.endswith(".txt"):
                 print(iten)
@@ -64,7 +67,7 @@ def modificar_arquivo(senha):
 # deletar arquivo
 def deletar_arquivo(senha):
     try:
-        lista = os.listdir("c:/exerciciosArquivos")
+        lista = os.listdir(os.path.dirname(os.path.dirname(__file__)) + "\\exerciciosArquivos\\")
         for iten in lista:
             if iten.endswith(".txt"):
                 print(iten)
