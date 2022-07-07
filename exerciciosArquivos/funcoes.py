@@ -53,7 +53,8 @@ def ler_arquivo(senha):
 # modificar o conteudo
 def modificar_arquivo(senha):
     try:
-        lista = os.listdir(os.path.dirname(os.path.dirname(__file__)) + "\\exerciciosArquivos\\")
+        lista = os.listdir(os.path.dirname(os.path.dirname(__file__)) +
+                           "\\exerciciosArquivos\\")
         for iten in lista:
             if iten.endswith(".txt"):
                 print(iten)
@@ -67,7 +68,8 @@ def modificar_arquivo(senha):
 # deletar arquivo
 def deletar_arquivo(senha):
     try:
-        lista = os.listdir(os.path.dirname(os.path.dirname(__file__)) + "\\exerciciosArquivos\\")
+        lista = os.listdir(os.path.dirname(os.path.dirname(__file__)) +
+                           "\\exerciciosArquivos\\")
         for iten in lista:
             if iten.endswith(".txt"):
                 print(iten)
