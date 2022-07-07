@@ -1,5 +1,9 @@
-file1 = open("a1.txt", "a")
-file2 = open("a2.txt", "r")
+import os
+
+file1 = open(os.path.dirname(os.path.dirname(__file__)) +
+             "\\exerciciosArquivos\\"+"a1.txt", "a")
+file2 = open(os.path.dirname(os.path.dirname(__file__)) +
+             "\\exerciciosArquivos\\"+"a2.txt", "r")
 
 for x in file2:
     y = x.split(". ")
