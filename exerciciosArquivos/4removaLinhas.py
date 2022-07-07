@@ -31,7 +31,7 @@ filetemp = file1.readlines()
 filetemp += file2.readlines()
 file1.close()
 file2.close()
-print(filetemp)
+
 # transformo em dicionario
 dicionario = {}
 for linha in filetemp:
@@ -40,5 +40,3 @@ for linha in filetemp:
 # pego a ordenação das chaves e imprimo os itens em ordem crescente
 for x in sorted(dicionario):
     print(dicionario[x], end="")
-
-print(dicionario.items())

@@ -1,5 +1,8 @@
-print("Primeiro programa python no github!")
 
-var = 10
 
-print("{0:b}".format(var))
+s = "S"
+
+try:
+    print(int(s))
+except ValueError as e:
+    print(e.args[0])

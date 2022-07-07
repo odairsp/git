@@ -1,6 +1,4 @@
-from funcoes import existe_senhas, conferir_senha, criar_arquivo, ler_arquivo,\
-    modificar_arquivo, deletar_arquivo
-
+from funcoes import *
 
 # xxxxxxxxxxxxxxxxxxxx   INICIO   xxxxxxxxxxxxxxxxxxxx
 while True:
@@ -17,13 +15,13 @@ while True:
             print("0 - Sair")
             tarefa = input("Escolha uma tarefa: ")
             if tarefa == "1" and senha[1][0] == "1":
-                criar_arquivo(senha)
+               criar_arquivo(senha)
             elif tarefa == "2" and senha[1][0] == "2":
-                ler_arquivo(senha)
+               ler_arquivo(senha)
             elif tarefa == "3" and senha[1][0] == "3":
-                modificar_arquivo(senha)
+               modificar_arquivo(senha)
             elif tarefa == "4" and senha[1][0] == "4":
-                deletar_arquivo(senha)
+               deletar_arquivo(senha)
             elif tarefa == "0":
                 break
             else:
